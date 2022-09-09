@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Hit checker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/point.css">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="module" defer src="js/cleanTable.js"></script>
+    <script type="module" defer src="js/main.js"></script>
+    <script type="module" defer src="js/picture.js"></script>
+
+</head>
+<body style="background-image: url(images/background.png); background-position: top center; background-size: cover;">
+<table>
+    <tr>
+        <td colspan="2">
+            <!-- Шапка с именем и группой -->
+            <header> Выполнила: Громилова Мария Дмитриевна, группа P3130, вариант 3006
+            </header>
+        </td>
+    </tr>
+    <tr><!-- Форма ввода значений -->
+        <td>
+            <form action="#" class="checkerForm" id="checkerForm">
+                <div class="formHeader">Проверьте попадание значений вашей точки</div>
+                <div class="textX">Введите значение X:</div>
+                <input type="text" id="x" class="formX" name="formX" placeholder="Введите число от -3 до 3" />
+                <div id="Xerror" class="Xerror"> </div>
+                <div class="textY">Выберите значение Y:</div>
+                <select name="chooseY" id="y" class="formY" >
+                    <option value="-5">-5</option>
+                    <option value="-4">-4</option>
+                    <option value="-3">-3</option>
+                    <option value="-2">-2</option>
+                    <option value="-1">-1</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <div class="textR" id="r">Выберите значение R:</div>
+                <input type="radio" name="chooseR" value="1" class="formR">1
+                <input type="radio" name="chooseR" value="2" class="formR">2
+                <input type="radio" name="chooseR" value="3" class="formR">3
+                <input type="radio" name="chooseR" value="4" class="formR">4
+                <input type="radio" name="chooseR" value="5" class="formR">5
+                <div id="Rerror" class="Rerror"> </div>
+                <button type="button"  class="submitButton" id="send">Отправить</button>
+            </form>
+        </td>
+        <td class="image" >
+            <!-- Координатная плоскость с содержимым -->
+            <img id="img" src="images/img.png" height="378" width="413" alt="Координатная плоскость">
+        </td>
+    </tr>
+    <tr>
+        <!-- Таблица -->
+        <td colspan="2">
+            <div>
+                <table class="resultTable" id="resultTable">
+                        <td>    </td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>R</td>
+                        <td>Результат</td>
+                        <td>Время выполнения</td>
+                        <td>Текущее время</td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<div id="cleaner">
+    <input type="button" value="Очистить таблицу" id="cleanButton" onclick="clean()">
+</div>
+</body>
+</html>

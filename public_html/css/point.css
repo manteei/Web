@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.container-point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #960a0a;
+    border-radius: 50%;
+}

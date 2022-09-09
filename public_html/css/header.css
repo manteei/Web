@@ -1,0 +1,15 @@
+header::first-letter{
+    color: azure;
+}
+header {
+    background: #002c48;
+    opacity: 0.85;
+    font-family: 'fantasy', 'Impact';
+    color: #99d9c1;
+    width: 45%;
+    font-size: 20px;
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 40px;
+}
